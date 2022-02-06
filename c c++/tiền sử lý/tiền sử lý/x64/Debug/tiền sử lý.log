@@ -1,0 +1,4 @@
+﻿  define.cpp
+D:\c c++\tiền sử lý\tiền sử lý\define.cpp(14,1): warning C4005: 'year_of_birth': macro redefinition
+D:\c c++\tiền sử lý\tiền sử lý\define.cpp(4): message : see previous definition of 'year_of_birth'
+  tiền sử lý.vcxproj -> D:\c c++\tiền sử lý\x64\Debug\tiền sử lý.exe

@@ -1,0 +1,8 @@
+﻿  code1.c
+D:\c c++\code c\code c\code1.c(10,7): warning C4013: 'gets_' undefined; assuming extern returning int
+D:\c c++\code c\code c\code1.c(21,2): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\c c++\code c\code c\code1.c(23,2): error C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\c c++\code c\code c\code1.c(31,16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\c c++\code c\code c\code1.c(52,16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\c c++\code c\code c\code1.c(69,6): warning C4101: 'i': unreferenced local variable
+D:\c c++\code c\code c\code1.c(70,7): warning C4101: 'g': unreferenced local variable

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "0852b77c-5a19-41c1-a165-1fe41b49ed88": {
+      "ProjectGuid": "0852b77c-5a19-41c1-a165-1fe41b49ed88",
+      "DisplayName": "dùng hàm để tính toán",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

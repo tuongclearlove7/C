@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "da0f518f-64af-42ec-abfa-ba6bfd0699f5": {
+      "ProjectGuid": "da0f518f-64af-42ec-abfa-ba6bfd0699f5",
+      "DisplayName": "truyền giá trị cho hàm trong c++",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
