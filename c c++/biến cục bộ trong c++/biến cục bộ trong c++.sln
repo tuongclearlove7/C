@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32106.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "biến cục bộ trong c++", "biến cục bộ trong c++\biến cục bộ trong c++.vcxproj", "{14A5D64F-83BF-4EFF-B5F2-5E8324F9471A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14A5D64F-83BF-4EFF-B5F2-5E8324F9471A}.Debug|x64.ActiveCfg = Debug|x64
+		{14A5D64F-83BF-4EFF-B5F2-5E8324F9471A}.Debug|x64.Build.0 = Debug|x64
+		{14A5D64F-83BF-4EFF-B5F2-5E8324F9471A}.Debug|x86.ActiveCfg = Debug|Win32
+		{14A5D64F-83BF-4EFF-B5F2-5E8324F9471A}.Debug|x86.Build.0 = Debug|Win32
+		{14A5D64F-83BF-4EFF-B5F2-5E8324F9471A}.Release|x64.ActiveCfg = Release|x64
+		{14A5D64F-83BF-4EFF-B5F2-5E8324F9471A}.Release|x64.Build.0 = Release|x64
+		{14A5D64F-83BF-4EFF-B5F2-5E8324F9471A}.Release|x86.ActiveCfg = Release|Win32
+		{14A5D64F-83BF-4EFF-B5F2-5E8324F9471A}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {75746C3D-7553-4464-AC51-2DA69D71DB1F}
+	EndGlobalSection
+EndGlobal
