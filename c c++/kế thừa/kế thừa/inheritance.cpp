@@ -1,41 +1,47 @@
 ﻿#include <iostream>
+#include<string>
 using namespace std;
 
 // Base class
-class Mystr {
+class MystrClass {
 public:
     void Mystring() {
-        cout << "Some content in parent class.\n";
+        string my_str_ing;
+        cout << "Input String : ";
+        cin >> my_str_ing;
+        cout << "String is : " + my_str_ing << endl;
     }
 };
 
 // Another base class
 class MyIntClass {
 public:
-    int I = 10;
+    int MyInt() {
+        int I;
+        cout << "Input Int : ";
+        cin >> I;
+        return I;
+    }
 };
 class MyFlClass {
 public:
-    float F = 2.5;
+    float MyFloat() {
+        float F;
+        cout << "Input Float : ";
+        cin >> F;
+        return F;
+    }
 };
-class Total {
-public:
-    float T;
-};
+
 // Derived class
-class Myclass : public Mystr, public MyIntClass, public MyFlClass,public Total {
+class Myclass : public MystrClass, public MyIntClass, public MyFlClass {
 };
 
 int main() {
     Myclass myObj;
-
-    cout << "string is : "; myObj.Mystring();
-    cout <<"number integer is : " << myObj.I << endl;
-    cout <<"number float is : " << myObj.F<<endl;
-    cout << "total I + T = ";
-    myObj.T = myObj.I + myObj.F;
-    cout << myObj.T;
-
+    myObj.Mystring();
+    cout <<"number integer is : " << myObj.MyInt() << endl;
+    cout <<"number float is : " << myObj.MyFloat();
     return 0;
 }
 
