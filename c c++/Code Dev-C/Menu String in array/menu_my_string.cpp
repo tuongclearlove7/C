@@ -83,26 +83,26 @@ int main(){
 		    cout<<bai1(str);
 		break;
 		case 2:		
-		    cout<<"| "<<bai2(str);
+		    cout<<"| output : "<<bai2(str);
 		break;
 		case 3:		
-		    cout<<"| "<<bai3(str);
+		    cout<<"| output : "<<bai3(str);
 		break;
 		case 4:		
-		    cout<<"| "<<bai4(str);
+		    cout<<"| output : "<<bai4(str);
 		break;
 		case 5:		
-		    cout<<"| "<<bai5(str);
+		    cout<<"| output : "<<bai5(str);
 		break;
 		case 6:		
-		    cout<<"| "<<bai6(str);
+		    cout<<"| output : "<<bai6(str);
 		break;
 		case 7:		
-		    cout<<"| ";
+		    cout<<"| output : ";
 			cout<<bai7(str);	
 		break;
 		case 8:	
-			cout<<"| ";	
+			cout<<"| output : ";	
 		    bai8(str);
 		break;
 		}
