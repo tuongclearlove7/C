@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string.h>
+#include <cstring>
 #include <conio.h>
 #include <iomanip>
 
@@ -54,16 +55,65 @@ char * bai7(char str[])
 		break;
 	}
 }
-char * bai8(char str[])
-{
-	char str2[100];
-	for(int i=strlen(str)-1, j=0; i > 0; i--, j++)
-	{
-	str2[j]=str[i];
-	if (str[i]==' ') break;}
-	for (int i=strlen(str2)-2; i>=0; i--)
-	cout <<str2[i];
+char * bai8(char str[]){
+	int count=0;
+	strrev(str);
+	for(int i=0;str[i]!='\0';i++){
+		if(str[i]==' ') break;
+		count++;
+	}
+	for(int i=count-1;i>=0;i--){
+		cout<<str[i];
+	}	
 }
+char * bai9(char str[]){
+     char c;
+     cout<<"| nhap ky tu muon xoa : ";
+     cin>>c;
+     for(int i=0;str[i]!='\0';i+=1){
+         if(str[i]==c){
+         for(int j=i;str[j]!='\0';j++){
+                 if(str[j+1]=='\0'){
+                     str[j]=='\0';
+                     break;
+                }
+             str[j]=str[j]+str[j+1];
+             str[j+1]=str[j]-str[j+1];
+             str[j]=str[j]-str[j+1];
+             }
+         break;
+         }
+    }
+    return str;
+}
+int bai10(char str[]){
+	int count=0;
+	for(int i=0;str[i]!='\0';i++){
+		if(toupper(str[i])=='A'||toupper(str[i])=='I'||toupper(str[i])=='E'||toupper(str[i])=='O'||toupper(str[i])=='U')
+		count+=1;
+	}
+	return count;
+}
+void bai11(){
+	char ho[99],dem[99],ten[99];
+	cout<<"| Nhap ho : ";
+	fflush(stdin);
+	gets(ho);
+	cout<<"| Nhap ten dem : ";
+	gets(dem);
+	cout<<"| Nhap ten : ";
+	gets(ten);
+	strcat(ho," ");
+	strcat(ho,dem);
+	strcat(ho," ");
+	strcat(ho,ten);
+	cout<<"| ho va ten : "<<ho;
+}
+char * bai12(){
+
+
+}
+
 int main(){
 	char str[100];
 	int choose = -1;
@@ -74,7 +124,7 @@ int main(){
 	cout << setw(15) << right <<""<<"String exercises\n";
 	cout << setw(5) << right <<"| Input string : ";
 	gets(str);
-	cout<<"| choose exercise 1,2,3,4,5,6,7,8,9,10 : ";
+	cout<<"| choose exercise 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22 : ";
 	cin>>choose;
 	while(choose){
 		switch(choose){
@@ -83,30 +133,45 @@ int main(){
 		    cout<<bai1(str);
 		break;
 		case 2:		
-		    cout<<"| output : "<<bai2(str);
+		    cout<<"| "<<bai2(str);
 		break;
 		case 3:		
-		    cout<<"| output : "<<bai3(str);
+		    cout<<"| "<<bai3(str);
 		break;
 		case 4:		
-		    cout<<"| output : "<<bai4(str);
+		    cout<<"| "<<bai4(str);
 		break;
 		case 5:		
-		    cout<<"| output : "<<bai5(str);
+		    cout<<"| "<<bai5(str);
 		break;
 		case 6:		
-		    cout<<"| output : "<<bai6(str);
+		    cout<<"| "<<bai6(str);
 		break;
 		case 7:		
-		    cout<<"| output : ";
+		    cout<<"| ";
 			cout<<bai7(str);	
 		break;
 		case 8:	
-			cout<<"| output : ";	
+			cout<<"| ";	
 		    bai8(str);
 		break;
+		case 9:		
+		    cout<<"| "<<bai9(str);
+		break;
+		case 10:		
+		    cout<<"| "<<bai10(str);
+		break;
+		case 11:		
+		    cout<<"| ";
+            bai11();
+		break;   
+		/*case 12:		
+		    cout<<"| ";
+            bai12(str1,str2,str3);
+		break;*/
 		}
 	break;
 	}
 cout<<"\n===================END==========================\n";
+getch();
 }
