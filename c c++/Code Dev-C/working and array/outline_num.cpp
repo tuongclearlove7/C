@@ -14,6 +14,7 @@ int main() {
         case 81:
         case 91:
             std::cout<<"\n";
+            break;
         }
             std::cout<<i<<",";
     }
