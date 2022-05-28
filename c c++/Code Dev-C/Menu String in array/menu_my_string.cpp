@@ -3,6 +3,7 @@
 #include <cstring>
 #include <conio.h>
 #include <iomanip>
+#include<algorithm>
 
 using namespace std;
 int bai1(char str[]) {
@@ -73,22 +74,22 @@ char * bai8(char str[]){
 	}	
 }
 
-char * bai9(char str[]) {
+char * bai9(char my_str[]) {
       int i, j;
       char c;
-      int n = strlen(str);
-      cout<<"| input character in string clear : ";
+      int n = strlen(my_str);
+      cout<<"| ex 9 input character clear : ";
       cin>>c;
 	  for(i=0; i<n; i++) {
-	     if(str[i] == c) {
+	     if(my_str[i] == c) {
 		    for(j=i; j<n; j++){
-		        str[j]= str[j+1];
-		   		str[n]='\0';
+		        my_str[j]= my_str[j+1];
+		   		my_str[n]='\0';
 		 		i--;
 			}
         }
     }
-	return str;         
+	return my_str;         
 }
 
 int bai10(char str[]){
@@ -101,30 +102,30 @@ int bai10(char str[]){
 	return count;
 }
 void bai11(){
-	char surname[10000000000],mname[4525235],name[3525235325];
-	cout<<"| input surname : ";
+	char surname[100],mname[100],name[100];
+	cout<<"| ex 11 input surname : ";
 	fflush(stdin);
-	gets(surname);
-	cout<<"| input middle name : ";
-	gets(mname);
-	cout<<"| input name : ";
-	gets(name);
+	cin>>surname;
+	cout<<"| ex 11 input middle name : ";
+	cin>>mname;
+	cout<<"| ex 11 input name : ";
+	cin>>name;
 	strcat(surname," ");
 	strcat(surname,mname);
 	strcat(surname," ");
 	strcat(surname,name);
-	cout<<"| output : "<<surname;
+	cout<<"| ex 11 output : "<<surname;
 }
 
 char * bai12() {
 	char str1[100];
-	cout<<"| input string 1 : ";
+	cout<<"| ex 12 input string 1 : ";
 	cin>>str1;
 	char str2[100];
-	cout<<"| input string 2 : ";
+	cout<<"| ex 12 input string 2 : ";
 	cin>>str2;
 	char str3[100];
-	cout<<"| input string 3 : ";
+	cout<<"| ex 12 input string 3 : ";
 	cin>>str3;
 	return strcmp(str1,str2)<0?(strcmp(str1,str3)<0?str1:str3):(strcmp(str2,str3)<0?str2:str3);
 }
@@ -158,14 +159,14 @@ char * bai14(char str[]) {
 char * bai15() {
 	char str1[100];
 	char str2[100];
-	cout<<"| input string 1 : ";
+	cout<<"| ex 15 input string 1 : ";
 	std::cin>>str2;
 	strcpy(str1, str2);
-	cout<<"| string1 = string2 : "<<str1<<"\n";
-	cout<<"| input string 2 : ";
+	cout<<"| ex 15 string1 = string2 : "<<str1<<"\n";
+	cout<<"| ex 15 input string 2 : ";
 	std::cin>>str1;
 	strcpy(str2, str1);
-	cout<<"| string2 = string1 : "<<str2;
+	cout<<"| ex 15 string2 = string1 : "<<str2;
 
 }
 	
@@ -203,141 +204,127 @@ char * bai19(char str[]) {
 }
 
 char * bai20(char str[]) {
-	int i, j, k;
+	int index, index2, k;
     k = strlen(str);
-    for (i = 0; i < k; i++)  
-    	for (j = i + 1; j < k; j++) {
-          if (str[i] == str[j])
-          strncpy(str + j, str + j + 1, k - j);
-           k = strlen(str);
+    for (index = 0; index < k; index++)  
+    	for (index2 = index + 1; index2 < k; index2++) {
+          if (str[index] == str[index2])
+	          strncpy(str + index2, str + index2 + 1, k - index2);
+	           k = strlen(str);
     }
     return str;
 }
 
 char * bai21(char str[]) {
-   int i,j,k,l=0;
+   int index,index2,k,l=0;
    char string[300];
    
-   for(i=0;i<strlen(str);i++) {
+   for(index=0;index<strlen(str);index++) {
       k=0;
-   	  for(j=0;j<=l;j++)
-         if(str[i]==string[j])
+   	  for(index2=0;index2<=l;index2++)
+         if(str[index]==string[index2])
          k++;
          if (k==0){
          	k=1;
-         for(j=i+1;j<strlen(str);j++)
-            if (str[i]==str[j])
+         for(index2=index+1;index2<strlen(str);index2++)
+            if (str[index]==str[index2])
 	            k++;
-	           cout<<str[i]<<":"<<k<<"\t";
+	            cout<<str[index]<<":"<<k<<"\t";
       }
-      string[l]=str[i];
+      string[l]=str[index];
       l++;
    }
 }
 
 char * bai22(char str[]) {
-int n = strlen(str); 
-for(int i=0;i<n;i++)
-	 if(str[i]==32) {
-		for(int j=i;j<n;j++) {
-			 str[j]=str[j+1];
-			 i-=1;
- 		}
-	}
-	return str;
+   int count = 0;
+    for (int i = 0; str[i]; i++)
+        if (str[i] != ' ')
+            str[count++] = str[i]; 
+    str[count] = '\0';
+    return str;
 }
-
-int main(){
+void handle(){
 	char str[100];
-	int choose = -1;
-	cout << setw(5) << left << "======================";		
+	char my_str[100];
+	int choose=-1;
+	cout << setw(5) << left << "\n======================";		
 	cout << setw(3) << right <<"MENU";
 	cout << setw(5) << right << "======================" << endl;
 	cout << setw(1) << left <<"|";
 	cout << setw(15) << right <<""<<"String exercises\n";
-	cout << setw(5) << right <<"| Input string : ";
+	cout << "|\n|"<<setw(9) << right<<"" <<" Input string : ";
 	gets(str);
-	cout<<"| choose exercise 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22 : ";
+	cout << "|"<<setw(4) << right<<""<<" Input string you want clear : ";
+	gets(my_str);
+	cout <<"|\n|" <<setw(7) << right <<""<<"Options [keyword : 1, 17, 19, 20]\n|";
+	cout <<setw(9) << right<<""<<" please! choose keywords : ";
 	cin>>choose;
 	while(choose){
 		switch(choose){
 		case 1:		
-		    cout<<"| output : ";
-		    cout<<bai1(str);
-		break;
-		case 2:		
-		    cout<<"| output : "<<bai2(str);
-		break;
-		case 3:		
-		    cout<<"| output : "<<bai3(str);
-		break;
-		case 4:		
-		    cout<<"| output : "<<bai4(str);
-		break;
-		case 5:		
-		    cout<<"| output : "<<bai5(str);
-		break;
-		case 6:		
-		    cout<<"| output : "<<bai6(str);
-		break;
-		case 7:		
-		    cout<<"| output : ";
+		    cout<<"|\n| ex 1 output : ";
+		    cout<<bai1(str)<<"\n";
+			cout<<"| ex 2 output : "<<bai2(str)<<"\n";
+		    cout<<"| ex 3 output : "<<bai3(str)<<"\n";	
+			cout<<"| ex 4 output : "<<bai4(str)<<"\n";
+			cout<<"| ex 5 output : "<<bai5(str)<<"\n";
+		    cout<<"| ex 6 output : "<<bai6(str)<<"\n";
+		    cout<<"| ex 7 output : ";
 			bai7(str);	
-		break;
-		case 8:	
-			cout<<"| output : ";	
-		    bai8(str);
-		break;
-		case 9:		
-		    cout<<"| output : "<<bai9(str);
-		break;
-		case 10:		
-		    cout<<"| output : "<<bai10(str);
-		break;
-		case 11:		
-            bai11();
-		break;   
-		case 12:		
-            cout<<"| output : "<<bai12();
-		break;
-		case 13:		
-            cout<<"| output : "<<bai13();
-		break;
-		case 14:		
-            cout<<"| output : "<<bai14(str);
-		break;
-		case 15:		
+			cout<<"\n";
+			cout<<"| ex 8 output : ";	
+		    bai8(str);	
+		    cout<<"\n";	
+		    cout<<"| ex 10 output : "<<bai10(str);
+		    cout<<"\n";	
+		    cout<<"| ex 9 output : "<<bai9(my_str);	
+		    cout<<"\n";	
+            bai11();   		
+            cout<<"\n";	
+            cout<<"| ex 12 output : "<<bai12();
+			cout<<"\n";	
+            cout<<"| ex 13 output : "<<bai13()<<"\n";
+            cout<<"| ex 14 output : "<<bai14(str);
+            cout<<"\n";
             bai15();
-		break;
-		case 16:		
-            cout<<"| output : ";
+			cout<<"\n";	
+            cout<<"| ex 16 output : ";
 			bai16(str);
+			cout<<"\n";
 		break;
-		case 17:
-			cout<<"| output : ";	
-            bai17(str);
-		break;
-		case 18:
-			cout<<"| output : ";
-			bai18(str);
-		break;
-		case 19:
-			cout<<"| output : ";
+			case 17://tran tuong
+			cout<<"| ex 17 output : ";
+			bai17(my_str);
+            cout<<"\n";
+			cout<<"| ex 18 output : ";
+			bai18(my_str);
+			cout<<"\n";
+			cout<<"| ex 22 output : "<<bai22(str);
+			break;
+		case 19://tran tuong
+			cout<<"| ex 19 output : ";
 			bai19(str);
-		break;
-		case 20:
-			cout<<"| output : "<<bai20(str);
-		break;
-		case 21:
-			cout<<"| output : ";
+			cout<<"\n";
+			cout<<"| ex 21 output : ";
 			bai21(str);
+			cout<<"\n";
 		break;
-		case 22:
-			cout<<"| output : "<<bai22(str);
-		break;
+		case 20://duy tan
+			cout<<"| ex 20 output : "<<bai20(str)<<"\n";
+			break;
 		}
 	break;
+	}
+	cout<<"\n===================END==========================\n";
+	getch();
+	system("cls");
+	cin.ignore(256, '\n');
 }
-cout<<"\n===================END==========================\n";
+int main(){
+	handle();
+	handle();
+	handle();
+	handle();
 getch();
 }
