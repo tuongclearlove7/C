@@ -171,7 +171,7 @@ char * bai15() {
 }
 	
 char * bai16(char str[]) {
-	char name[100]="Le Thi Hoa Cuc";
+	char passoword[100]="Le Thi Hoa Cuc";
 	
 }
 
@@ -218,7 +218,6 @@ char * bai20(char str[]) {
 char * bai21(char str[]) {
    int index,index2,k,l=0;
    char string[300];
-   
    for(index=0;index<strlen(str);index++) {
       k=0;
    	  for(index2=0;index2<=l;index2++)
@@ -244,11 +243,12 @@ char * bai22(char str[]) {
     str[count] = '\0';
     return str;
 }
+
 void handle(){
 	char str[100];
 	char my_str[100];
 	int choose=-1;
-	cout << setw(5) << left << "\n======================";		
+	cout << setw(5) << left << "======================";		
 	cout << setw(3) << right <<"MENU";
 	cout << setw(5) << right << "======================" << endl;
 	cout << setw(1) << left <<"|";
@@ -260,13 +260,13 @@ void handle(){
 	cout <<"|\n|" <<setw(7) << right <<""<<"Options [keyword : 1, 17, 19, 20]\n|";
 	cout <<setw(9) << right<<""<<" please! choose keywords : ";
 	cin>>choose;
-	while(choose){
+	while(choose) {
 		switch(choose){
 		case 1:		
 		    cout<<"|\n| ex 1 output : ";
 		    cout<<bai1(str)<<"\n";
 			cout<<"| ex 2 output : "<<bai2(str)<<"\n";
-		    cout<<"| ex 3 output : "<<bai3(str)<<"\n";	
+		    cout<<"| ex 3 output : "<<bai3(str)<<"\n";		
 			cout<<"| ex 4 output : "<<bai4(str)<<"\n";
 			cout<<"| ex 5 output : "<<bai5(str)<<"\n";
 		    cout<<"| ex 6 output : "<<bai6(str)<<"\n";
@@ -315,16 +315,24 @@ void handle(){
 			break;
 		}
 	break;
-	}
 	cout<<"\n===================END==========================\n";
-	getch();
-	system("cls");
-	cin.ignore(256, '\n');
+	}	
 }
 int main(){
-	handle();
-	handle();
-	handle();
-	handle();
+	int i = 0;
+	int loop;
+	cout<<"please!!! Input the number of program iterations : ";
+	cin>>loop;
+	if(loop==0||loop=='y' || loop=='Y'){
+			cout<<"ban da nhap sai\n";
+	}
+	cout<<"Press enter to continue";
+	while(i<loop){
+		getch();
+		system("cls");
+		cin.ignore(256, '\n');
+		handle();
+		i++;
+	}
 getch();
 }
