@@ -291,7 +291,6 @@ void handle(){
 			cout<<"\n";	
             cout<<"| ex 16 output : ";
 			bai16(str);
-			cout<<"\n";
 		break;
 			case 17://tran tuong
 			cout<<"| ex 17 output : ";
@@ -308,7 +307,6 @@ void handle(){
 			cout<<"\n";
 			cout<<"| ex 21 output : ";
 			bai21(str);
-			cout<<"\n";
 		break;
 		case 20://duy tan
 			cout<<"| ex 20 output : "<<bai20(str)<<"\n";
