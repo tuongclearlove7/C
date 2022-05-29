@@ -314,25 +314,27 @@ void handle(){
 			cout<<"| ex 20 output : "<<bai20(str)<<"\n";
 			break;
 		}
+		cout<<"\n===================END==========================\n";
 	break;
-	cout<<"\n===================END==========================\n";
 	}	
 }
 int main(){
 	int i = 0;
 	int loop;
-	cout<<"please!!! Input the number of program iterations : ";
+	cout<<"Please!!! Input the number of program iterations : ";
 	cin>>loop;
-	if(loop==0||loop=='y' || loop=='Y'){
-			cout<<"ban da nhap sai\n";
+	if(loop==0){
+		cout<<"ban da nhap sai";
 	}
-	cout<<"Press enter to continue";
-	while(i<loop){
-		getch();
-		system("cls");
-		cin.ignore(256, '\n');
-		handle();
-		i++;
+	else{
+		cout<<"Press enter to continue";
+		while(i<loop){
+			getch();
+			system("cls");
+			cin.ignore(256, '\n');
+			handle();
+			i++;
 	}
+}
 getch();
 }
