@@ -101,6 +101,7 @@ int bai10(char str[]){
 	}
 	return count;
 }
+
 void bai11(){
 	char surname[100],mname[100],name[100];
 	cout<<"| ex 11 input surname : ";
