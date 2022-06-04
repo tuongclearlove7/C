@@ -15,16 +15,6 @@ struct Student{
 	int masv;
 };
 
-bool check(Student arr[], int n) {
-	int value;
-	for(int i = 0; i < n; i++)
-	{
-		if(arr[i].masv == value){
-			return true;
-		}
-	}
-	return false;
-}
 
 Student input(Student arr[],int n){
 	int j;
@@ -45,12 +35,13 @@ Student input(Student arr[],int n){
 			   	cin.ignore(256, '\n');
 			   	cout<<"| ";
 			   	cin.ignore(256, '\n');
-				cout<<"| nhap diem toan : ";
-				cin>>arr[i].toan;
-				cout<<"| nhap diem hoa : ";
-				cin>>arr[i].hoa;
-				cout<<"| nhap diem ly : ";
-				cin>>arr[i].ly;
+			   	
+			   		cout<<"| nhap  toan : ";
+					cin>>arr[i].toan;
+					cout<<"| nhap diem hoa : ";
+					cin>>arr[i].hoa;
+					cout<<"| nhap diem ly : ";
+					cin>>arr[i].ly;
 	}
 }
 
@@ -74,7 +65,7 @@ Student output(Student arr[],int n){
 		cout<<"\n| diem ly cua "<<arr[i].name<<" la : "<<arr[i].ly;
 		arr[i].tb=(float) (arr[i].toan + arr[i].ly + arr[i].hoa)/3;
 		cout<<"\n| diem trung binh cua sinh vien "<<arr[i].name<<" la : "<<arr[i].tb<<"\n";
-		if(arr[i].tb >=11)
+		if(arr[i].tb > 10)
 			cout<<"| khong co xep loai cho so diem nay\n";
 		else if(arr[i].tb >= 8) 
 			cout<<"| sinh vien "<<arr[i].name<<" xep loai Gioi\n";
@@ -84,7 +75,7 @@ Student output(Student arr[],int n){
 			cout<<"| sinh vien "<<arr[i].name<<" xep loai Trung binh\n";
 		else if(arr[i].tb < 5)
 			cout<<"| sinh vien "<<arr[i].name<<" xep loai Yeu\n";
-		if(arr[i].tb >=11)
+		if(arr[i].tb > 10)
 			cout<<"| khong co hoc bong so diem nay\n";
 		else if(arr[i].tb >=9) 
 			cout<<"| sinh vien "<<arr[i].name<<" duoc hoc bong la 900\n";
