@@ -1,4 +1,10 @@
-#include <iostream> 
+#include <iostream>
+#include <string.h>
+#include <cstring>
+#include <conio.h>
+#include <iomanip>
+#include<algorithm>
+
 #include <fstream> 
 #include<process.h>
 using namespace std;
@@ -138,8 +144,11 @@ int main() {
 	int n; 
 	int arr[10000];
 	cout << "====================Menu====================" << endl;
-	handle(arr,n);
-/*	cout<<"choose program : ";
+	//handle(arr,n);
+	cout << setw(15) << right <<""<<"Bai tap ve file\n";
+	cout<<"1 : bai 1, bai 2, bai 3, bai 4, bai 5, bai 6, bai 8, bai 10.\n2 : bai 7\n";
+	cout << setw(10) << right <<""<<"Options!!! [keywords] : 1, 2 \n";
+	cout << setw(15) << right <<""<<"choose program : ";
 	cin>>choose;
 	cin.ignore(256,'\n');
 	while(choose) {
@@ -147,13 +156,12 @@ int main() {
 			case 1:		
     			handle(arr,n);
 			break;
-    	
 			case 2:
 			soft_num_infile();
     		break;
 			}
 		break;
-	}*/
+	}
 	cout << "\n====================END=====================" << endl;
 }
 
