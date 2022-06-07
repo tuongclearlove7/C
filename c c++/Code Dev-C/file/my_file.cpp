@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string.h>
+#include <string>
 #include <cstring>
 #include <conio.h>
 #include <iomanip>
@@ -92,6 +93,8 @@ handle(int arr[], long int n){
 	input(arr,n);
     outfile << "====================Menu====================" << endl; 
     outfile <<"| "<< data << endl; 
+    int len=strlen(data);
+    outfile<<"bai tho co "<<len<<"ky tu";
 	outfile<<"| Bai tho co "<<Count_Char_Upper(data)<<" ky tu hoa";
 	outfile << "\n====================END=====================" << endl; 	
     outfile.close(); 
