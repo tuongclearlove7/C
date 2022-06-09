@@ -1,44 +1,57 @@
-#include <stdio.h>
+#include<stdio.h>
 
-int main(){
-    int a[100];
-    int n;
-    printf("\nNhap so luong phan tu n = ");
-    do{
-        scanf("%d", &n);
-        if(n <= 0){
-            printf("\nNhap lai n = ");
-        }
-    }while(n <= 0);
-    
-    for(int i = 0; i < n; i++){
-        printf("\nNhap a[%d] = ",i);
-        scanf("%d", &a[i]);
-    }
-    
-    // Sap xep dung thuat toan sap xep chon
-    int tg;
-    for(int i = 0; i < n - 1; i++){
-        for(int j = i + 1; j < n; j++){
-            if(a[i] > a[j]){
-                // Hoan vi 2 so a[i] va a[j]
-                tg = a[i];
-                a[i] = a[j];
-                a[j] = tg;        
+#include<string.h>
+
+int demKiTu(char xau[])
+
+{
+
+            int dem=1,j,temp;
+
+            for(int i=1;i<strlen(xau);i++)
+
+            {
+
+if(xau[i] != ' ')// neu ky tu khac ky tu trong thi thuc hien lenh
+
+{
+
+            temp = 1;// moi lan lap i gan temp = 1
+
+            for(j=i-1;j>=0;j--)// xet tu ky tu truoc tro di den xau[0]
+
+            {
+                if(xau[j] == xau[i])
+
+                {
+
+                temp = 0;
+                break;
+                }
             }
-        }
-    }
-    
-    
-    printf("\nMang da sap xep la: ");
-    for(int i = 0; i < n; i++){
-        printf("%5d", a[i]);
-    }
-    
-    
+            if(temp == 1)
+				dem++;
+
 }
 
+    }
 
+            return dem;
+}
+
+int main()
+
+{
+
+            char xau[99];
+
+            printf("Nhap xau: ");
+
+            gets(xau);
+
+            printf("\nCo %d ki tu trong xau!",demKiTu(xau));
+
+}
 
 
 

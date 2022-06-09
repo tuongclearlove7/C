@@ -1,0 +1,5 @@
+====================Menu====================
+| tuong
+|so ky tu trong cau tho la : 5
+| Bai tho co 0 ky tu hoa
+====================END=====================

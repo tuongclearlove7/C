@@ -1,5 +1,6 @@
 ====================Menu====================
-| Tuong Yeu
-| Bai tho co 2 ky tu hoa
+| tuong
+|so ky tu trong cau tho la : 5
+| Bai tho co 0 ky tu hoa
 ====================END=====================
 ÿ
