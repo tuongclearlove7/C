@@ -1,7 +1,7 @@
 #include<iostream>
 #include<fstream>
 #include<conio.h>
-
+//xử lý mảng tĩnh 
 using namespace std;
 
 int find_first_x(int arr[], int x){
