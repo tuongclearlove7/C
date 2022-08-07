@@ -81,7 +81,7 @@ int handle(){
 				cout<<"ket qua sap xep la : ";
 				soft_array(arr);
 				break;
-			case 4:
+			case 4:d
 				lunisolar(arr);
 				break;
 			case 5:

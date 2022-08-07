@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
- 
 #define close(f) freopen(f".output","w",stdout)
 #define open(f) freopen(f".input","r",stdin)
 #define reset(x,val) memset((x),(val),sizeof(x))

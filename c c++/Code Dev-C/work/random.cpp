@@ -1,28 +1,19 @@
-#include <cstdlib>
+#include<iostream>
+#include<string.h>
 #include <ctime>
-#include <iostream>
-
-#include <bits/stdc++.h>
+#include <unistd.h>
 
 using namespace std;
-const int ch_MAX = 9;
-string RandomString(int ch){
-    char alpha[ch_MAX] = { 'vo chong a phu', 'dat nuoc', 'chiec thuyen', 'song da', 'song huong', 'vo nhat', 'tay tien',
-                          'viet bac'};
-    string result = "";
-    for (int i = 0; i<ch; i++)
-        result = result + alpha[rand() % ch_MAX];
-
-    return result;
+int main(){
+	string str[8] = {"bin", "cla", "del", "for", "lon", "pre", "sta", "try"};
+	int i, N;
+	string S;
+	S = "";
+	for (i = 0; i < 3; i++) { 
+	  N = random(8);
+	  S += str[N];
+	}
 }
-int main()
-{
-srand(time(NULL));
-   int ch = 9;
-cout<<RandomString(ch) <<"\n";
-   return 0;
-}
-
 
 
 
