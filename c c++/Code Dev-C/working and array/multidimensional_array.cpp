@@ -16,6 +16,7 @@ int myarray(){
 	}
 }
 int main(){
+	//mang da chieu
 	int test[4][3][2] = {
                             {
                                 {1, 2},
