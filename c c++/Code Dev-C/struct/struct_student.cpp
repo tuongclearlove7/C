@@ -18,19 +18,31 @@ struct Student{
 
 Student input(Student arr[],int n){
 	int j;
-	int key[4] = {101,102,103,104};
+	int count =0;
+	int hs = 0;
+	int key[10] = {101,102,103,104,105,106,107,108};
 	cout<<"| nhap so sinh vien : ";
 	std::cin>>n;
-		for(int i=1;i<=n;i++) {
+		for(int i=0;i<n;i++) {
+			count++;
+			hs--;
+			cout<<"hs "<<hs<<"\n";
+			cout<<"count "<<count<<"\n";
 			cout<<"| nhap ten : ";
 			cin>>arr[i].name;
 			cout<<"| vui long nhap ma sinh vien : ";
 			cin>>arr[i].masv;
 			do {
-			if (arr[i].masv!=key[0] && arr[i].masv!=key[1] && arr[i].masv!=key[2] && arr[i].masv!=key[3])
-				    cout<<"| Ma sinh vien nay k ton tai vui long nhap lai!!! : ";
-				    cin>>arr[i].masv;	
-		    }while(arr[i].masv!=key[0] && arr[i].masv!=key[1] && arr[i].masv!=key[2] && arr[i].masv!=key[3]); 
+			if (arr[i].masv!=key[0] && arr[i].masv!=key[1] && arr[i].masv!=key[2] && arr[i].masv!=key[3]){
+				cout<<"| Ma sinh vien nay k ton tai vui long nhap lai!!! : ";
+				cin>>arr[i].masv;
+				}
+			else if(arr[i].masv==key[count-2]){
+				cout<<"| Ma sinh vien trung nhau vui long nhap lai!!! : ";
+				cin>>arr[i].masv;
+				}
+		    }while(arr[i].masv!=key[0] && arr[i].masv!=key[1] && arr[i].masv!=key[2] && arr[i].masv!=key[3],
+			arr[i].masv==key[count-2]); 
 		   		cout<<"| chuc mung ban da nhap dung ma sinh vien bam enter de tiep tuc\n";
 			   	cin.ignore(256, '\n');
 			   	cout<<"| ";
@@ -49,7 +61,7 @@ Student output(Student arr[],int n){
 	Student tmp;
 	cout<<"| nhap so hoc sinh can xem : ";
 	cin>>n;
-	for(int i=1;i<=n;i++){
+	for(int i=0;i<n;i++){
 		for(int j = i+1; j < n;++j){
             if(arr[i].tb > arr[j].tb){
                 tmp = arr[i];
@@ -58,7 +70,7 @@ Student output(Student arr[],int n){
             }
         }
 		cout<<"\n_________________________________________________________\n";
-		cout<<"| "<<i<<". sinh vien "<<strupr(arr[i].name);
+		cout<<"| "<<i+1<<". sinh vien "<<strupr(arr[i].name);
 		cout<<"\n| ma sinh vien cua sinh vien "<<arr[i].name<<" la : "<<arr[i].masv;
 		cout<<"\n| diem toan cua "<<arr[i].name<<" la : "<<arr[i].toan;
 		cout<<"\n| diem hoa cua "<<arr[i].name<<" la : "<<arr[i].hoa;
@@ -86,7 +98,7 @@ Student output(Student arr[],int n){
 		else
 			cout<<"| sinh vien "<<arr[i].name<<" khong duoc hoc bong\n";
 	}
-	cout<<"| "<<arr;
+
 }
 
 Student alphabet(){

@@ -1,0 +1,16 @@
+
+_________________________________________________________
+| 1. sinh vien TUONG
+| ma sinh vien cua sinh vien TUONG la : 101
+| diem toan cua TUONG la : 1
+| diem hoa cua TUONG la : 1
+| diem ly cua TUONG la : 1
+| diem trung binh cua sinh vien TUONG la : 1
+
+_________________________________________________________
+| 2. sinh vien ANH
+| ma sinh vien cua sinh vien ANH la : 102
+| diem toan cua ANH la : 2
+| diem hoa cua ANH la : 2
+| diem ly cua ANH la : 2
+| diem trung binh cua sinh vien ANH la : 2
