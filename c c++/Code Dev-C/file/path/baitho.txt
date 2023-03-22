@@ -1,5 +1,5 @@
 ====================Menu====================
-| tuong
-|so ky tu trong cau tho la : 5
+| quaeqwe
+|so ky tu trong cau tho la : 7
 | Bai tho co 0 ky tu hoa
 ====================END=====================

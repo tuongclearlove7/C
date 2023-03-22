@@ -1,4 +1,1 @@
-﻿  define.cpp
-D:\c c++\tiền sử lý\tiền sử lý\define.cpp(14,1): warning C4005: 'year_of_birth': macro redefinition
-D:\c c++\tiền sử lý\tiền sử lý\define.cpp(4): message : see previous definition of 'year_of_birth'
-  tiền sử lý.vcxproj -> D:\c c++\tiền sử lý\x64\Debug\tiền sử lý.exe
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(439,5): error MSB8020: The build tools for v143 (Platform Toolset = 'v143') cannot be found. To build using the v143 build tools, please install v143 build tools.  Alternatively, you may upgrade to the current Visual Studio tools by selecting the Project menu or right-click the solution, and then selecting "Retarget solution".

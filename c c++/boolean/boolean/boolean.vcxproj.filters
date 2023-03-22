@@ -18,5 +18,8 @@
     <ClCompile Include="bool.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="booLean.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

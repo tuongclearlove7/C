@@ -90,15 +90,15 @@ int count_numinarr(int arr[]){
 
 int sort(int arr[]){
 		
-						int flag;
+				int flag;
 								
-												for(int i = 0; i<5 ; i++)
-													for(int j = i ; j<5 ; j++)
-														if(arr[i] > arr[j]){
-															flag = arr[i];
-															arr[i]=arr[j];
-															arr[j] = flag;
-														} 
+				for(int i = 0; i<5 ; i++)
+					for(int j = i ; j<5 ; j++)
+						if(arr[i] > arr[j]){
+							flag = arr[i];
+							arr[i]=arr[j];
+							arr[j] = flag;
+						} 
 		
 				for (int i = 0; i < 5; i++)
 					cout<<arr[i] << " ";
