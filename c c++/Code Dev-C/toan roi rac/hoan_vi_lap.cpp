@@ -11,7 +11,7 @@ void print(int k){
 	
 }
 
-void xau(int n,int k){
+void hv_lap(int n,int k){
 	
 	for(int i = 1; i<=k;i++)b[i] = 0;
 	print(k);
@@ -28,7 +28,7 @@ void xau(int n,int k){
 
 int main(){
 	
-	xau(n,k);
+	hv_lap(n,k);
 	
 	
 } 
