@@ -5,9 +5,8 @@ int b[20], k=3, n=4;
 
 void print(int k){
 	
-	for(int i = 1; i<=k; i++){
+	for(int i = 1; i<=k; i++)
 		cout<<b[i];
-	}
 	cout<<endl;
 	
 }
