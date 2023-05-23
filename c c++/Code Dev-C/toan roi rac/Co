@@ -1,36 +1,21 @@
 #include <iostream>
-#include <cmath>
+#include <algorithm>
 using namespace std;
 
-void printChar(char b[], int k) {
-    for (int i = 1; i <= k; i++)
-        cout << b[i] << " ";
-    cout << endl;
-}
-
-void hv_lap(char b[], int n, int k) {
-    for (int i = 1; i <= k; i++)
-        b[i] = 1;
-
-    printChar(b, k);
-
-    for (int c = 1; c < pow(n, k); c++) {
-        int i = k;
-        while (b[i] == n)
-            i = i - 1;
-        b[i] = b[i] + 1;
-        for (int j = i + 1; j <= k; j = j + 1)
-            b[j] = 1;
-        printChar(b, k);
-    }
+void printPermutations(string b[], int n) {
+    do {
+        for (int i = 0; i < n; i++) {
+            cout << b[i] << " ";
+        }
+        cout << endl;
+    } while (next_permutation(b, b + n));
 }
 
 int main() {
-    char b[6] = {' ', 'xoai', 'cam', 'quit', 'oi', 'khe'};
+    string b[5] = {"xoai", "cam", "quit", "oi", "khe"};
     int n = 5;
-    int k = 5;
 
-    hv_lap(b, n, k);
+    printPermutations(b, n);
 
     return 0;
 }
