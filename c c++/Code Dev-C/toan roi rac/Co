@@ -1,21 +1,46 @@
 #include <iostream>
-#include <algorithm>
+#include <stdio.h>
+#include <string>
 using namespace std;
 
-void printPermutations(string b[], int n) {
-    do {
-        for (int i = 0; i < n; i++) {
-            cout << b[i] << " ";
-        }
-        cout << endl;
-    } while (next_permutation(b, b + n));
+string B[20];
+int n = 7, k = 4;
+
+void Print(int k) {
+    for (int i = 1; i <= k; i++)
+        cout << B[i] << "\t";
+    cout << endl;
+}
+
+void LKTH(int n, int k, string arr[]) {
+    for (int i = 1; i <= k; i++)
+        B[i] = arr[i];
+
+    Print(k);
+
+    int c = 1;
+    while (true) {
+        int i = k;
+        while (B[i] == arr[n - k + i])
+            i--;
+        
+        if (i == 0)
+            break;
+        
+        int pos = find(arr, arr + n + 1, B[i]) - arr;
+        B[i] = arr[pos + 1];
+
+        for (int j = i + 1; j <= k; j++)
+            B[j] = arr[j];
+
+        Print(k);
+        c++;
+    }
 }
 
 int main() {
-    string b[5] = {"xoai", "cam", "quit", "oi", "khe"};
-    int n = 5;
+    string b[8] = {" ", "dai", "dung", "hoa", "long", "thanh", "vy", "tuan"};
 
-    printPermutations(b, n);
-
+    LKTH(n, k, b);
     return 0;
 }
