@@ -4,6 +4,21 @@ int G[20][20], n, C[20], u=1;
 
 
 FILE *fptr;
+
+
+void view_graph(int G[20] [20], int n){
+       int i,j;
+       printf("so dinh %d\n",n);
+       printf("ma tran ke \n\n");
+
+      for(i=1;i<=n;i++){
+          for(j=1 j<n; j++)
+              printf("%d\t",G[i][j]);
+          printf("\n\n");
+      }
+}
+
+
 int init(char * path){
 	
 	int i, j;
