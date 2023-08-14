@@ -57,7 +57,8 @@ int maxmin_array(int arr[]) {
 }
 
 int sort(int arr[]) {
-
+	//bubble sort
+	//sắp xếp nổi bọt
 	int s;
 	int flag = ZERO_MINPlayer;
 
