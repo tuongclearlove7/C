@@ -1,5 +1,3 @@
-// cho  1 mang a, gom n phan tu va 1 mang b co gom m phan tu ca 2 mang deu duoc sap xep tang dan hay tao thanh mang c laf hop cua 2 mang a va b
-// sao cho mang c van duoc sap xep tan, khong duoc sap xep lai mang c
 #include <iostream>
 using namespace std;
 
