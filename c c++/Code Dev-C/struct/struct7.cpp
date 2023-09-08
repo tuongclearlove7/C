@@ -23,8 +23,11 @@ void sorted(int a[], int b[], int n){
 	}
 	
 }
-
-void mergeArrays(int a[], int n, int b[], int m, int c[]) {
+//cho 1 mang a gom n phan tu va 1 mang b gom m phan tu 
+//(ca 2 mang deu da duoc sap xep tang dan).
+//Hay tao thanh mang c la gop cua 2 mang a va b
+// sao cho mang c van duoc sap xep tang dan (k duoc sort lai mang c) 
+void ket_hop_mang_va_sapxep(int a[], int n, int b[], int m, int c[]) {
     int i = 0, j = 0, k = 0;
     
     while (i < n && j < m) {
@@ -61,7 +64,7 @@ int main() {
     
     sorted(a,b,n);
 	for(int i=0; i < n;++i){
-		mergeArrays(a, n, b, m, c);
+		ket_hop_mang_va_sapxep(a, n, b, m, c);
 	}
     
     cout << "Mang sau khi tron:\n";
