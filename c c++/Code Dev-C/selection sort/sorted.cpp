@@ -80,43 +80,63 @@ int count_numinarr(int arr[]){
 
 						int count;
 
-									for(int i = 0 ; i < 5; i++) {
-										count++;	
-	}
+						for(int i = 0 ; i < 5; i++) {
+							count++;	
+}
 	
 	cout<<"so phan tu trong mang tinh la : ";
 	return count;
 }
 
+void bubbleSort(int arr[], int n) {
+    
+    for (int i = 0; i < n - 1; i++)
+        for (int j = 0; j < n - i - 1; j++)
+            if (arr[j] > arr[j + 1]) {
+                // swap arr[j+1] và arr[i]
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+    }
+    
+    for (int i = 0; i < n; i++)
+		cout<<arr[i] << " ";
+}
+    
+    
+
 int sort(int arr[]){
 		
-				int flag;
-								
-				for(int i = 0; i<5 ; i++)
-					for(int j = i ; j<5 ; j++)
-						if(arr[i] > arr[j]){
-							flag = arr[i];
-							arr[i]=arr[j];
-							arr[j] = flag;
-						} 
-		
-				for (int i = 0; i < 5; i++)
-					cout<<arr[i] << " ";
+	int flag;
+					
+	for(int i = 0; i<5 ; i++)
+		for(int j = i ; j<5 ; j++)
+			if(arr[i] > arr[j]){
+				flag = arr[i];
+				arr[i]=arr[j];
+				arr[j] = flag;
+			} 
+
+	for (int i = 0; i < 5; i++)
+		cout<<arr[i] << " ";
 	
 }
 
 handlesort_static_arr(){
 	
 	static int arr[5]={9,3,1,10,2};
+	int n = sizeof(arr)/sizeof(arr[0]);
 
-							cout<<"static array : ";
-							for (int i = 0; i < 5; i++){
-								cout<<arr[i]<<" ";
-							}
+		cout<<"static array : ";
+		for (int i = 0; i < n; i++){
+			cout<<arr[i]<<" ";
+		}
 
 		cout<<"\n";
 		cout<<"sorted static array : ";
 		sort(arr);
+		cout<<"\nbubbleSort static array : ";
+		bubbleSort(arr, n);
 		cout<<"\n";
 	
 }
@@ -183,31 +203,33 @@ int main() {
 	int n;
 	int arr[5];
 	int x;
+	
+
 			
-			handlesort_static_arr();
-			input_dynamic_arr(arr);
-			cout<<"\n";
-			
-			cout<<max_place(arr)<<"\n";
-			cout<<min_place(arr)<<"\n";
-			
-			locate(arr);
-			cout<<"\n";
-			
-			cout<<"sorted dynamic array : ";
-			sort(arr);
-			
-			cout<<"\n";
-			maxmin_array(arr);
-		
-			cout<<"\n";
-			cout<<find_first_x(arr,x);
-			
-			cout<<"\n";
-			cout<<find_num_place(arr,x);
-		
-			cout<<"\n";
-			cout<<count_numinarr(arr);
+	handlesort_static_arr();
+	input_dynamic_arr(arr);
+	cout<<"\n";
+	
+	cout<<max_place(arr)<<"\n";
+	cout<<min_place(arr)<<"\n";
+	
+	locate(arr);
+	cout<<"\n";
+	
+	cout<<"sorted dynamic array : ";
+	sort(arr);
+	
+	cout<<"\n";
+	maxmin_array(arr);
+
+	cout<<"\n";
+	cout<<find_first_x(arr,x);
+	
+	cout<<"\n";
+	cout<<find_num_place(arr,x);
+
+	cout<<"\n";
+	cout<<count_numinarr(arr);
 	
 	return 0;
 }
