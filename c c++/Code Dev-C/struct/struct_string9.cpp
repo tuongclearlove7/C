@@ -14,7 +14,6 @@ int len(char a[]){
 string mid(char a[], int l, int r){
     string str;
     
-    //leng = len(a)
     for (int i = l-1; i < r+l; i++) {
         str += a[i];
     }
@@ -83,7 +82,6 @@ int main(){
     int r = 11;
     int n = 4;
     
-    tolower(32);
     
     cout<<left(a, 7)<<endl;
     cout << mid(a, 8, 7) << endl; 
