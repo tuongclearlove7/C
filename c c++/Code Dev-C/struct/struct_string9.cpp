@@ -102,8 +102,11 @@ int main(){
     int r = 11;
     int n = 4;
     
+<<<<<<< HEAD
     cout<<first(a)<<endl;
     cout<<last(a)<<endl;
+=======
+>>>>>>> 3012020818b918f6beac87af7ac7e7b9419ec8e2
     
     cout<<left(a, first(a))<<endl;
     cout << mid(a, 8, 7) << endl; 
