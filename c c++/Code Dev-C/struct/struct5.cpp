@@ -19,9 +19,6 @@ int in_arr(int a[], int &n){
 int out_arr(int a[], int n){
 	for (int i = 0; i < n; ++i)
     {
-        //ptr = &a[i];
-        //g=g+tostr(a[i])+"\n";
-        //std::cout << *ptr << std::endl;
 		std::cout << a[i] << std::endl;
     }
 	return 0;
@@ -74,7 +71,7 @@ main() {
 	in_arr(a, soluong);
     out_arr(a, soluong);
     std::cout<<"K xuat hien : "<<count_element(a, soluong, 1)<<" lan"<<std::endl;
-	//std::cout << g << std::endl;
+
 	
 
 }

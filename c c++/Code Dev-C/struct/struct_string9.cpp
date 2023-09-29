@@ -14,7 +14,6 @@ int len(char a[]){
 string mid(char a[], int l, int r){
     string str;
     
-    //leng = len(a)
     for (int i = l-1; i < r+l; i++) {
         str += a[i];
     }
@@ -27,9 +26,8 @@ string left(char a[],int n){
 
 	 string str;
      
-     for(int i=0;i<n;i++){
+     for(int i=0;i<n;i++)
         str += a[i];
-     }
 	 return str;
 }
 
@@ -75,6 +73,27 @@ std::string toLowerChar(char a[]) {
     return str;
 }
 
+int first(char a[]){
+	
+	for(int i = 0 ; i<len(a); i++){
+		if(a[i] == ' '){
+			return i;
+		}		
+	}
+
+}
+
+int last(char a[]){
+	
+	for(int i = len(a)-1 ; i>=0; i--){
+		if(a[i] == ' '){
+			return i;
+		}		
+	}
+
+}
+
+
 
 
 int main(){
@@ -83,9 +102,10 @@ int main(){
     int r = 11;
     int n = 4;
     
-    tolower(32);
+    cout<<first(a)<<endl;
+    cout<<last(a)<<endl;
     
-    cout<<left(a, 7)<<endl;
+    cout<<left(a, first(a))<<endl;
     cout << mid(a, 8, 7) << endl; 
     cout<<right(a, 7)<<endl;
     cout<<toUpperChar(a)<<endl;
