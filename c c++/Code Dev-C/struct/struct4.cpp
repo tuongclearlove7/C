@@ -7,7 +7,6 @@ void xoa_phan_tu(int arr[], int &n, int index){
         arr[i-1] = arr[i];
     }
     n--;
-    //cout<<n;
    
 }
 int main(){
