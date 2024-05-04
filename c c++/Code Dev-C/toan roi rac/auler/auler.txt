@@ -1,0 +1,21 @@
+đầu tiên đi từ đỉnh 1 nên đẩy 1 vào stack sau đó check 
+xem đỉnh nào kề với đỉnh 1 thì đẩy đỉnh đó vào ngăn xếp và xóa cạnh
+từ đỉnh 1 đến đỉnh kề đi 
+- tức là đi từ 1 sang 2 đưa 2 vào stack thì xóa cạnh 1-2
+- tiếp theo đỉnh kề 2 là đỉnh 3 lấy 3 bỏ vào stack và xóa cạnh 2-3
+- đi tiếp ta thấy đỉnh 3 kề vs đỉnh 1 xóa cạnh 3-1 và bỏ 1 vào stack
+- xét tiếp ta thấy 1 không còn kề với đỉnh nào nên xóa 1 ra khỏi stack
+và đưa đỉnh 1 vào chu trình euler
+- xét tiếp 3 không còn kề với đỉnh nào nên xóa 3 ra khỏi stack
+và đưa đỉnh 3 vào chu trình euler
+- tiếp theo xét 2 kề với đỉnh 4 đưa 4 vào ngăn xếp xóa cạnh 2-4
+- tiếp đến xét đỉnh 4 kề với 5 xóa cạnh 4-5 đưa 5 vào stack
+- xét tiếp đỉnh 5 kề với 2 đưa 2 vào stack xóa cạnh 5-2
+- xét tiếp 2 không kề với cạnh nào nên xóa 2 khỏi stack và đưa vào
+chu trình auler
+- tiếp tục lấy 5 ra vì không còn kề với đỉnh nào nên xóa 5 khỏi stack và đưa
+vào chu trình auler
+- tiếp tục lấy 4  và đưa vào chu trình auler 
+và đưa nốt 2 và 1 vào chu trình vì k còn kề vs đỉnh nào
+STACK={1, 2, 3, 1, 4, 5, 2}
+EC={1, 3, 2, 5, 4, 2, 1}

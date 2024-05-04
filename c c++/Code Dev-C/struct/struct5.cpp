@@ -39,11 +39,11 @@ int count_element(int a[], int &n,int k){
 int tim_phan_tu_giong_nhau_trong_mang(){
 	
 	int arr[5]={1,2,3,4,5};
-	int arr2[5]={1,2,3,4,5};
+	int arr2[4]={1,2,3,4};
 	
 	for(int j =0; j< 5; ++j){
 		int check = arr[j];
-		for(int i =0; i< 5; ++i){
+		for(int i =0; i< 4; ++i){
 			if(check == arr2[i]){
 				std::cout<<check<<" ";
 			}
